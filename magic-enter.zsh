@@ -5,10 +5,7 @@ if ! typeset -f magic-enter-cmd > /dev/null; then
         if [[ "$OSTYPE" == darwin* ]]; then
             cmd="exa -G"
         else
-            cmd="exa --color=auto"
-        fi
-        if command git rev-parse --is-inside-work-tree &>/dev/null; then
-            cmd="$cmd && git status -sb"
+            cmd="ls -lbF --git -I="bazel-*" --no-user --no-permissions --no-time"
         fi
         echo $cmd
     }
