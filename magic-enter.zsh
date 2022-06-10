@@ -5,7 +5,7 @@ if ! typeset -f magic-enter-cmd > /dev/null; then
         if [[ "$OSTYPE" == darwin* ]]; then
             cmd="exa -G"
         else
-            cmd="ls -lbF --git -I=\"bazel-*\" --no-user --no-permissions --no-time -s=type"
+            cmd="l -I=\"bazel-*\" --no-user --no-permissions --no-time -s=type"
         fi
         echo $cmd
     }
