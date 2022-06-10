@@ -40,4 +40,4 @@ case "$widgets[accept-line]" in
 esac
 
 # zle -N accept-line _magic-enter_accept-line
-bindkey '^@' magic-enter-cmd
+bindkey -s '^@' magic-enter-cmd
